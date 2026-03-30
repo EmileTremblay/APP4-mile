@@ -1,6 +1,6 @@
 package electronique;
 
-public class Composant {
+public abstract class Composant {
     public Composant(){
 
     }
