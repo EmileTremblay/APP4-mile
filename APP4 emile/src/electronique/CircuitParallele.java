@@ -1,4 +1,4 @@
 package electronique;
 
-public class CircuitParallele {
+public class CircuitParallele extends Circuit{
 }
