@@ -1,12 +1,13 @@
 package electronique;
 
 public class Resistance extends Composant {
-    public Resistance (double resistance){
-        this.calculerResistance();
+    private double valRes;
+    public Resistance (double valRes){
+        this.valRes = valRes;
     }
 
     @Override
     public double calculerResistance() {
-        return resistance;
+        return valRes;
     }
 }
