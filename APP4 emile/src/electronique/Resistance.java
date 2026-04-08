@@ -10,4 +10,9 @@ public class Resistance extends Composant {
     public double calculerResistance() {
         return valRes;
     }
+
+    @Override
+    public void close() throws Exception {
+
+    }
 }
