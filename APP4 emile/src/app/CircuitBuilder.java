@@ -36,7 +36,7 @@ public class CircuitBuilder {
         List<Composant> liste = new ArrayList<>();
 
         for (JsonNode enfant : node.get("composants")) {
-            liste.add(lireComposant(enfant)); // 🔁 récursion
+            liste.add(lireComposant(enfant));
         }
 
         if (type.equals("serie")) {
