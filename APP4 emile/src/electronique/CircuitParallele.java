@@ -18,4 +18,5 @@ public class CircuitParallele extends Circuit{
         return inverser;
 
     }
+
 }
