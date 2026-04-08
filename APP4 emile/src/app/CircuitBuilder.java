@@ -33,7 +33,6 @@ public class CircuitBuilder {
         if (type.equals("resistance")) {
             return new Resistance(node.get("valeur").asDouble());
         }
-
         List<Composant> liste = new ArrayList<>();
 
         for (JsonNode enfant : node.get("composants")) {
@@ -43,13 +42,11 @@ public class CircuitBuilder {
         if (type.equals("serie")) {
             return new CircuitSerie(liste);
         }
-
         if (type.equals("parallele")) {
             return new CircuitParallele(liste);
         }
-
         throw new IllegalArgumentException("Type invalide");
     }
 
     }
-}
+
