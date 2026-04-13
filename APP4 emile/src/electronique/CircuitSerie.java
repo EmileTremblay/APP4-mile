@@ -15,4 +15,8 @@ public class CircuitSerie extends Circuit{
 
     }
 
+    @Override
+    public void close() throws Exception {
+
+    }
 }

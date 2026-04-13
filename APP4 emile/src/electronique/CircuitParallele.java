@@ -19,4 +19,8 @@ public class CircuitParallele extends Circuit{
 
     }
 
+    @Override
+    public void close() throws Exception {
+
+    }
 }

@@ -32,19 +32,28 @@ public class CircuitBuilder {
 
         if (type.equals("resistance")) {
             return new Resistance(node.get("valeur").asDouble());
-        } else if ("composant".equals(type)) {
+        }else if (type.equals("serie")) {
+
             List<Composant> composants = new ArrayList<>();
+
             for (JsonNode composantNode : node.get("composants")) {
                 composants.add(lireComposant(composantNode));
             }
-            if (type.equals("serie")) {
-                return new CircuitSerie(composants);
+
+            return new CircuitSerie(composants);
+
+        } else if (type.equals("parallele")) {
+
+            List<Composant> composants = new ArrayList<>();
+
+            for (JsonNode composantNode : node.get("composants")) {
+                composants.add(lireComposant(composantNode));
             }
-            if (type.equals("parallele")) {
-                return new CircuitParallele(composants);
-            }
+
+            return new CircuitParallele(composants);
         }
-            throw new IllegalArgumentException("type de circuit invalide");
+
+        throw new IllegalArgumentException("type de circuit invalide");
 
     }
 }
